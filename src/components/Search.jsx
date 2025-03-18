@@ -5,12 +5,14 @@ function Search({ setSearch }) {
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      setQuery(query);
-    }, 1000);
+      setSearch(query);
+    }, 500);
+
     return () => {
-      clearTimeout(handler);
+      clearTimeout(handler); // Cleanup function
     };
   }, [query, setSearch]);
+
   return (
     <input
       type="text"
