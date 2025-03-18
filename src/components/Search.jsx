@@ -6,7 +6,7 @@ function Search({ setSearch }) {
   useEffect(() => {
     const handler = setTimeout(() => {
       setSearch(query);
-    }, 500);
+    }, 1000);
 
     return () => {
       clearTimeout(handler); // Cleanup function
