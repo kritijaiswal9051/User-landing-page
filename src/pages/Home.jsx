@@ -19,12 +19,13 @@ function Home() {
     getUser();
   }, []);
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-gray-100 p-6 ">
       <Hero />
       <div className="mt-6 max-w-md mx-auto">
         <Search setSearch={setSearch} />
+        <UserList users={users} search={search} />
       </div>
-      <UserList users={users} search={search} />
+
       <Pricing />
       <ContectForm />
     </div>
